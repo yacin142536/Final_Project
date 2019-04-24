@@ -2,17 +2,9 @@ package com.adaming.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 @Entity
 public class Hotel {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id_hotel")
-	private int idHotel;
 	
 	@Column(name="nom_hotel")
 	private String nomHotel;
@@ -30,21 +22,12 @@ public class Hotel {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Hotel(int idHotel, String nomHotel, String adresseHotel, String ville, int prixNuit) {
+	public Hotel(String nomHotel, String adresseHotel, String ville, int prixNuit) {
 		super();
-		this.idHotel = idHotel;
 		this.nomHotel = nomHotel;
 		this.adresseHotel = adresseHotel;
 		this.ville = ville;
 		this.prixNuit = prixNuit;
-	}
-
-	public int getIdHotel() {
-		return idHotel;
-	}
-
-	public void setIdHotel(int idHotel) {
-		this.idHotel = idHotel;
 	}
 
 	public String getNomHotel() {
@@ -79,13 +62,5 @@ public class Hotel {
 		this.prixNuit = prixNuit;
 	}
 
-	@Override
-	public String toString() {
-		return "Hotel [idHotel=" + idHotel + ", nomHotel=" + nomHotel + ", adresseHotel=" + adresseHotel + ", ville="
-				+ ville + ", prixNuit=" + prixNuit + "]";
-	}
 	
-	
-	
-
 }

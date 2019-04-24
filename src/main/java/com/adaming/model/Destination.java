@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Pays {
+public class Destination {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -21,15 +21,16 @@ public class Pays {
 	
 	@Column(name="code_postale")
 	private int codePostale;
-	
-	private List<Hotel> listHotels;
 
-	public Pays() {
+	
+	private List<ReservationHotel> listHotels;
+
+	public Destination() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Pays(int idPay, String nomPays, int codePostale, List<Hotel> listHotels) {
+	public Destination(int idPay, String nomPays, int codePostale, List<ReservationHotel> listHotels) {
 		super();
 		this.idPay = idPay;
 		this.nomPays = nomPays;
@@ -61,11 +62,11 @@ public class Pays {
 		this.codePostale = codePostale;
 	}
 
-	public List<Hotel> getListHotels() {
+	public List<ReservationHotel> getListHotels() {
 		return listHotels;
 	}
 
-	public void setListHotels(List<Hotel> listHotels) {
+	public void setListHotels(List<ReservationHotel> listHotels) {
 		this.listHotels = listHotels;
 	}
 

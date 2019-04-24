@@ -1,20 +1,26 @@
 package com.adaming.service;
 
+
+
 import java.util.List;
 
-import fr.adaming.model.Country;
+import com.adaming.model.ReservationHotel;
 
-public interface IReservationService  {
 
-	public List<Reservation> getAllCountries();
+
+public interface IReservationService {
 	
-	public Reservation getReservation(int id);
+	public List<ReservationHotel> getAllReservationHotel();
+
+	public ReservationHotel addReservationHotel();
 	
-	public Country addCountry(Country country);
+	public ReservationHotel updateReservationHotel();
 	
-	public Country updateCountry(Country country);
+	public ReservationHotel deleteReservationHotel();
 	
-	public void deleteCountry(int id);
+	public ReservationHotel afficherReservationHotel();
 	
+	
+
 	
 }

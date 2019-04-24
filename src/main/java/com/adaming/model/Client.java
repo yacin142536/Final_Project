@@ -21,13 +21,8 @@ public class Client {
 	
 	private String email;
 	
-	@Column(name="date_aller")
-	private int dateAller;
-	
-	@Column(name="date_retour")
-	private int dateRetour;
-	
 	private String password;
+	
 	private String login;
 	
 	
@@ -37,15 +32,19 @@ public class Client {
 	}
 
 
+	public Client(int idClient) {
+		super();
+		this.idClient = idClient;
+	}
+
+
 	public Client(int idClient, String nom, String prenom, String email, int dateAller, int dateRetour,
 			String password, String login) {
 		super();
 		this.idClient = idClient;
 		this.nom = nom;
 		this.prenom = prenom;
-		this.email = email;
-		this.dateAller = dateAller;
-		this.dateRetour = dateRetour;
+		this.email = email;	
 		this.password = password;
 		this.login = login;
 	}
@@ -90,27 +89,6 @@ public class Client {
 		this.email = email;
 	}
 
-
-	public int getDateAller() {
-		return dateAller;
-	}
-
-
-	public void setDateAller(int dateAller) {
-		this.dateAller = dateAller;
-	}
-
-
-	public int getDateRetour() {
-		return dateRetour;
-	}
-
-
-	public void setDateRetour(int dateRetour) {
-		this.dateRetour = dateRetour;
-	}
-
-
 	public String getPassword() {
 		return password;
 	}
@@ -133,7 +111,7 @@ public class Client {
 	@Override
 	public String toString() {
 		return "Client [idClient=" + idClient + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email
-				+ ", dateAller=" + dateAller + ", dateRetour=" + dateRetour + ", password=" + password + ", login="
+				+  ", password=" + password + ", login="
 				+ login + "]";
 	}
 	
