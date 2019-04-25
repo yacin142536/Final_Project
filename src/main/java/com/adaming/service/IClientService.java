@@ -1,28 +1,22 @@
 package com.adaming.service;
 
+import java.util.List;
+
+import com.adaming.model.Client;
+
 public interface IClientService {
 	
-	public static Client reserverVol() {
-		
-	}
+	public Client save(Client Client);
+	
+	public Client update(Client Client);
+	
+	public void delete(Client Client);
+	
+	public Client findById(Integer id);
+	
+	public List<Client> findAll();
+	
 
-	public static Client reserverHotel() {
-		
-	}
-	
-	public static Client reserverNavette() {
-		
-	}
-	
-	public static Client inscrire() {
-		
-	}
-	
-	public void connecter() {
-		
-	}
-	
-	public 
 	
 	
 }

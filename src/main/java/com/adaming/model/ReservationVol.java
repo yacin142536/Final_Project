@@ -2,9 +2,12 @@ package com.adaming.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 public class ReservationVol {
@@ -20,8 +23,14 @@ public class ReservationVol {
 	@Column(name="date_retour")
 	private int dateRetour;
 	
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_hotel")
 	private  ReservationHotel reservationHotel;
+	
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="id_transport")
 	private  ReservationNavette reservationNavette;
+	
 	private int prixVoyage;
 	
 	public ReservationVol() {
