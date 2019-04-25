@@ -21,6 +21,7 @@ public class ClientDaoImplTest {
 	
 
 
+	hhgj
 	    private static final Logger LOGGER = LoggerFactory.getLogger(ClientDaoImplTest.class);
 	    
 	    @Autowired
