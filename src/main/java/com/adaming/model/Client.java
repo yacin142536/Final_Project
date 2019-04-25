@@ -49,6 +49,14 @@ public class Client {
 		this.login = login;
 	}
 
+	
+
+	public Client(int idClient, String nom) {
+		super();
+		this.idClient = idClient;
+		this.nom = nom;
+	}
+
 
 	public int getIdClient() {
 		return idClient;

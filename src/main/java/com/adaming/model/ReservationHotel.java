@@ -2,9 +2,11 @@ package com.adaming.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class ReservationHotel extends Hotel {
@@ -17,6 +19,9 @@ public class ReservationHotel extends Hotel {
 	private String dateEntre;
 	
 	private String dateSortie;
+	
+	@OneToOne(fetch=FetchType.LAZY, mappedBy="id_hotel")
+	private ReservationVol reservationVol;
 
 	public ReservationHotel() {
 		super();
